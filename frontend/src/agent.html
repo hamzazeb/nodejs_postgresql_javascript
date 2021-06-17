@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Agent Dashboard</h1>
+    <h2> Welcome: <span id='agentRole'></span> </h2>
+    <form class="modal-content animate">
+        <div class="container">
+            <h3 style="text-align: center;">Post Your Lead Here</h3>
+            <label for="uname"><b>Lead Id:</b></label>
+            <input type="text" placeholder="Enter Lead Id" id="leadId" required>
+            <br>
+            <label><b>Phone No: </b></label>
+            <input type="text" placeholder="Enter Phone No" id="phoneNo" required>
+
+            <button id="submitLead" type="button" onclick=lead()>Submit</button>
+        </div>
+    </form>
+
+    <script src="agent.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Manager Dashboard</h1>
+    <h2> Welcome: <span id='managerRole'></span> </h2>
+
+    <form class="modal-content animate">
+        <div class="container">
+            <h3 style="text-align: center;">Add new user</h3>
+            <label><b>Username: </b></label>
+            <input type="text" placeholder="Enter Lead Id" id="username" required>
+            <br>
+            <label><b>Password: </b></label>
+            <input type="text" placeholder="Enter Phone No" id="password" required>
+            <br><br>
+            <label><b>Role: </b></label>
+            <input type="radio" id="role" name="role" value="agent">
+            <label for="male">Agent</label>
+            <input type="radio" id="role" name="role" value="manager">
+            <label for="female">Manager</label><br><br>
+
+            <button id="submitLead" type="button" onclick=userFun()>Add</button>
+        </div>
+    </form>
+
+
+    <script src="manager.js"></script>
+</body>
+
+</html>
