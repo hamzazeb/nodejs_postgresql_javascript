@@ -10,7 +10,7 @@ function headers() {
 }
 
 function agent() {
-    console.log('user in agent page: ', user)
+    // console.log('user in agent page: ', user)
     document.getElementById("agentRole").innerHTML = user.username;
 }
 agent();
@@ -27,10 +27,8 @@ const leadPosting = async (method, leadId, pno) => {
         }),
         headers: headers(),
     });
-    const myJson = await response.json(); //extract JSON from the http response
-    // do something with myJson
+    const myJson = await response.json(); 
     return myJson;
-    // console.log("reaponse json is: ", myJson)
 }
 
 //- Using an anonymous function:
@@ -38,14 +36,17 @@ const lead = async () => {
     var leadId = document.getElementById("leadId").value;
     var phoneNo = document.getElementById("phoneNo").value;
 
-    console.log("leadId: ", leadId, " | pno: ", phoneNo);
+    // console.log("leadId: ", leadId, " | pno: ", phoneNo);
 
     leadPosting("POST", leadId, phoneNo).then((resp) => {
-        console.log("response is: ", resp);
+        // console.log("response is: ", resp);
         if (resp == 'API Error') {
             alert("Something went wrong! Try Again");
         } else {
+            document.getElementById('leadId').value = '';
+            document.getElementById('phoneNo').value = '';
             alert("Lead Posted Successfully :)");
+
         }
     })
 };

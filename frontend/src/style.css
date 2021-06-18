@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7fcfc;
 }
 
 /* Full-width input fields */
@@ -34,12 +35,20 @@ button:hover {
     width: 100%;
 }
 
-
 /* Modal Content/Box */
 
 .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal-content1 {
+    background-color: #fefefe;
+    margin: 0% auto 0% auto;
     /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 40%;
@@ -69,4 +78,95 @@ button:hover {
     to {
         transform: scale(1)
     }
+}
+
+/* 
+
+#agents {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #agents td, #agents th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #agents tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #agents tr:hover {background-color: #ddd;}
+  
+  #agents th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  } */
+
+th, td, p, input {
+    font: 15px 'Segoe UI';
+}
+
+table, th, td {
+    border: solid 1px #ddd;
+    border-collapse: collapse;
+    padding: 7px 50px;
+    font-size: large;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+.stats div{
+    margin: 10px;
+    text-align: center;
+}
+
+.stats .agents {
+    float: left;
+    border: 2px solid black;
+    height: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.stats .totalLeads {
+    float: left;
+    border: 2px solid black;
+    height: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.totalLeads p {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.leadsBwDates p {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.stats .leadsBwDates {
+    float: left;
+    border: 2px solid black;
+    height: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.statsHead {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 95%;
+    font-size: large;
 }

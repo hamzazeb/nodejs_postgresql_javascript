@@ -9,9 +9,9 @@ function headers() {
 }
 
 const checkLogin = () => {
-    console.info("checking login");
+    // console.info("checking login");
     var user = JSON.parse(localStorage.getItem('user'));
-    console.log("user in localstorage:", user)
+    // console.log("user in localstorage:", user)
     // if (user != null) {
     //     if (user.role == 'manager') {
     //         window.location.href = './manager.html';
@@ -27,7 +27,7 @@ const checkLogin = () => {
 
 
 const loginAPI = async (method, username, pwd) => {
-    console.log("method: ", method, ", username: ", username, ", password ", pwd);
+    // console.log("method: ", method, ", username: ", username, ", password ", pwd);
     const response = await fetch(baseURL + '/users/login', {
         method: method,
         body: JSON.stringify({
@@ -36,19 +36,17 @@ const loginAPI = async (method, username, pwd) => {
         }),
         headers: headers(),
     });
-    const myJson = await response.json(); //extract JSON from the http response
-    // do something with myJson
+    const myJson = await response.json(); 
     return myJson;
-    // console.log("reaponse json is: ", myJson)
 }
 
 //- Using an anonymous function:
 const login = async () => {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    console.log("login called with: ", username, " | ", password);
+    // console.log("login called with: ", username, " | ", password);
     loginAPI("PUT", username, password).then((resp) => {
-        console.log("response is: ", resp);
+        // console.log("response is: ", resp);
         if (resp.role == 'manager') {
             // alert("Welcome manager", resp.username)
             callManager(resp);

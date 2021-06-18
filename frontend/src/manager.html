@@ -11,14 +11,14 @@
     <h1>Manager Dashboard</h1>
     <h2> Welcome: <span id='managerRole'></span> </h2>
 
-    <form class="modal-content animate">
+    <form class="modal-content1 animate">
         <div class="container">
             <h3 style="text-align: center;">Add new user</h3>
             <label><b>Username: </b></label>
-            <input type="text" placeholder="Enter Lead Id" id="username" required>
+            <input type="text" placeholder="Enter Username" id="username" required>
             <br>
             <label><b>Password: </b></label>
-            <input type="text" placeholder="Enter Phone No" id="password" required>
+            <input type="password" placeholder="Enter Password" id="password" required>
             <br><br>
             <label><b>Role: </b></label>
             <input type="radio" id="role" name="role" value="agent">
@@ -29,7 +29,35 @@
             <button id="submitLead" type="button" onclick=userFun()>Add</button>
         </div>
     </form>
+<hr><br>
+    <div class="stats">
+        <div class="statsHead">Stats</div>
+        <div class="agents">
+            <h2>Agents Leads</h2>
+            <p id='showData'></p>
+        </div>
+        
+        <div class="totalLeads">
+            <h2>Total Leads</h2>
+            <p id='totalLead'></p>
 
+        </div>
+        
+        <div class="leadsBwDates">
+            <h2>Date Filter</h2>
+
+            <label><b>Start date: </b></label>
+            <input type="date" placeholder="start date" id="start_date" required>
+            <br>
+            <label><b>End date: </b></label>
+            <input type="date" placeholder="end date" id="end_date" required>
+            <br><br>
+            <button id="leadBw" type="button" onclick=leadsBw()>Get Stats</button>
+            <br>
+            <p id='leadBwWrite'></p>
+
+        </div>
+    </div>
 
     <script src="manager.js"></script>
 </body>
